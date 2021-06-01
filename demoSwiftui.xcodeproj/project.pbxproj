@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0429D31426663D750046046B /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 0429D31326663D750046046B /* QGrid */; };
+		0429D31826663D890046046B /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 0429D31726663D890046046B /* PopupView */; };
+		0429D31C26663DD70046046B /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 0429D31B26663DD60046046B /* people.json */; };
+		0429D32026663DF00046046B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0429D31F26663DEF0046046B /* Storage.swift */; };
+		0429D32426663E230046046B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0429D32326663E230046046B /* Preview Assets.xcassets */; };
 		044D6A31263D31F20079C7BA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D6A30263D31F20079C7BA /* MessageView.swift */; };
 		0477BCB8263BBD9500ED46A3 /* SigmaHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477BCB7263BBD9500ED46A3 /* SigmaHomeView.swift */; };
 		0477BCBB263BE1AB00ED46A3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477BCBA263BE1AB00ED46A3 /* MenuView.swift */; };
@@ -24,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0429D31B26663DD60046046B /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
+		0429D31F26663DEF0046046B /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		0429D32326663E230046046B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		044D6A30263D31F20079C7BA /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		0477BCB7263BBD9500ED46A3 /* SigmaHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigmaHomeView.swift; sourceTree = "<group>"; };
 		0477BCBA263BE1AB00ED46A3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -47,12 +55,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0429D31826663D890046046B /* PopupView in Frameworks */,
+				0429D31426663D750046046B /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0429D31A26663DD60046046B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0429D31B26663DD60046046B /* people.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0429D32226663E230046046B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0429D32326663E230046046B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		04BF593E2637CF4D00370CE6 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +121,8 @@
 		04BF595F2637D09200370CE6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0429D32226663E230046046B /* Preview Content */,
+				0429D31A26663DD60046046B /* Resources */,
 				04BF596B26380C4E00370CE6 /* Cell */,
 				04BF59602637D0A400370CE6 /* LoginView.swift */,
 				04BF59642637F36B00370CE6 /* RegistrationView.swift */,
@@ -103,6 +131,7 @@
 				0477BCB7263BBD9500ED46A3 /* SigmaHomeView.swift */,
 				0477BCBA263BE1AB00ED46A3 /* MenuView.swift */,
 				044D6A30263D31F20079C7BA /* MessageView.swift */,
+				0429D31F26663DEF0046046B /* Storage.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -131,6 +160,10 @@
 			dependencies = (
 			);
 			name = demoSwiftui;
+			packageProductDependencies = (
+				0429D31326663D750046046B /* QGrid */,
+				0429D31726663D890046046B /* PopupView */,
+			);
 			productName = demoSwiftui;
 			productReference = 04BF59472637CF4D00370CE6 /* demoSwiftui.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +191,10 @@
 				Base,
 			);
 			mainGroup = 04BF593E2637CF4D00370CE6;
+			packageReferences = (
+				0429D31226663D750046046B /* XCRemoteSwiftPackageReference "QGrid" */,
+				0429D31626663D890046046B /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = 04BF59482637CF4D00370CE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -172,7 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0429D31C26663DD70046046B /* people.json in Resources */,
 				04BF59572637CF4E00370CE6 /* LaunchScreen.storyboard in Resources */,
+				0429D32426663E230046046B /* Preview Assets.xcassets in Resources */,
 				04BF59542637CF4E00370CE6 /* Preview Assets.xcassets in Resources */,
 				04BF59512637CF4E00370CE6 /* Assets.xcassets in Resources */,
 			);
@@ -190,6 +229,7 @@
 				04BF594D2637CF4D00370CE6 /* SceneDelegate.swift in Sources */,
 				04BF59652637F36B00370CE6 /* RegistrationView.swift in Sources */,
 				04BF596D26380C6600370CE6 /* ContactListCell.swift in Sources */,
+				0429D32026663DF00046046B /* Storage.swift in Sources */,
 				0477BCBB263BE1AB00ED46A3 /* MenuView.swift in Sources */,
 				044D6A31263D31F20079C7BA /* MessageView.swift in Sources */,
 				04BF59682637F37700370CE6 /* HomeView.swift in Sources */,
@@ -393,6 +433,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0429D31226663D750046046B /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		0429D31626663D890046046B /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0429D31326663D750046046B /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0429D31226663D750046046B /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+		0429D31726663D890046046B /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0429D31626663D890046046B /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04BF593F2637CF4D00370CE6 /* Project object */;
 }
